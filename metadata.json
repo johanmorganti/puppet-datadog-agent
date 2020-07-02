@@ -35,6 +35,10 @@
     {
       "name": "puppetlabs/powershell",
       "version_requirement": ">=2.3.0 <3.0.0"
+    },
+    {
+      "name": "puppet/zypprepo",
+      "version_requirement": ">=3.0.0 <4.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -114,12 +118,26 @@
         "8",
         "10"
       ]
+    },
+    {
+      "operatingsystem": "OpenSuSE",
+      "operatingsystemrelease": [
+        "15.0",
+        "15.1"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "15.0",
+        "15.1"
+      ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=4.6.0 <7.0.0"
+      "version_requirement": ">=5.5.8 <7.0.0"
     }
   ],
   "description": "This will install the Datadog monitoring agent. Sign up and get your API key at: http://www.datadoghq.com",
