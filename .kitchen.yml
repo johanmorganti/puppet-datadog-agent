@@ -31,6 +31,12 @@ platforms:
       vagrantfile_erb: environments/ubuntu1604/Vagrantfile
       provision: true
 
+  - name: opensuse15
+    driver_plugin: vagrant
+    driver:
+      vagrantfile_erb: environments/opensuse15/Vagrantfile
+      provision: true
+
 verifier:
   name: serverspec
 
