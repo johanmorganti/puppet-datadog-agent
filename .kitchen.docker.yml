@@ -61,7 +61,7 @@ platforms:
         - gem install r10k -v 2.6.7
         - cd /home/kitchen/puppet && r10k puppetfile install --moduledir=/tmp/modules
 
-  - name: opensuse-15
+  - name: opensuse/leap-15
     driver:
       provision_command:
         - zypper ar -G https://yum.puppet.com/puppet/sles/15/x86_64/ puppet-repo
