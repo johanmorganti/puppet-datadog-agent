@@ -282,8 +282,10 @@ jobs:
           command: rvm $RUBY_VERSION --verbose do bundle install --path .bundle
       - run:
           name: Execute Kitchen tests
-          command: rvm $RUBY_VERSION --verbose do bundle exec rake circle || cat .kitchen/logs/*.log
+          command: rvm $RUBY_VERSION --verbose do bundle exec kitchen test -D dd-agent-opensuse-leap-15
           no_output_timeout: 900
+      - store_artifacts:
+          path: .kitchen/logs
 
 workflows:
   version: 2

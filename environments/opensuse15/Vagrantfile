@@ -8,15 +8,17 @@ Vagrant.configure("2") do |config|
     #install puppet 6
     zypper ar -G https://yum.puppet.com/puppet/sles/15/x86_64/ puppet-repo
     zypper install -y puppet-agent
+    echo 'export PATH=/opt/puppetlabs/puppet/bin/:$PATH' >> ~/.bashrc
     ln -s /opt/puppetlabs/puppet/bin/puppet /usr/bin/puppet
 
     # install modules
     zypper install -y git
     cd /home/vagrant/puppet
-    /opt/puppetlabs/puppet/bin/gem install r10k -v 2.6.7
-    /opt/puppetlabs/puppet/bin/r10k puppetfile install --moduledir=/home/vagrant/puppet/modules
+    gem install r10k -v 2.6.7
+    r10k puppetfile install --moduledir=/home/vagrant/puppet/modules
 
     # link local module
     ln -s /puppet-datadog-agent /home/vagrant/puppet/modules/datadog_agent
+    sleep 20
   SHELL
 end

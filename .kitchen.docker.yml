@@ -67,12 +67,12 @@ platforms:
         - zypper ar -G https://yum.puppet.com/puppet/sles/15/x86_64/ puppet-repo
         - zypper install -y puppet-agent git
         - ln -s /opt/puppetlabs/puppet/bin/puppet /usr/bin/puppet
+        - echo 'export PATH=/opt/puppetlabs/puppet/bin/:$PATH' >> ~/.bashrc
         - mkdir /home/kitchen/puppet
         - printf <%= File.read('environments/etc/Puppetfile').inspect %> > /home/kitchen/puppet/Puppetfile
 
-        - gem install r10k -v 2.6.7
-        - cd /home/kitchen/puppet
-        - r10k puppetfile install --moduledir=/tmp/modules
+        - /opt/puppetlabs/puppet/bin/gem install r10k -v 2.6.7
+        - cd /home/kitchen/puppet && /opt/puppetlabs/puppet/bin/r10k puppetfile install --moduledir=/tmp/modules
 
 
 
