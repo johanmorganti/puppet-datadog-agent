@@ -291,34 +291,34 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - specs-ruby21-puppet46
-      - specs-ruby21-puppet410
-      - specs-ruby21-puppet50
-      - specs-ruby21-puppet53
-      - specs-ruby22-puppet46
-      - specs-ruby22-puppet410
-      - specs-ruby22-puppet50
-      - specs-ruby22-puppet53
-      - specs-ruby23-puppet46
-      - specs-ruby23-puppet410
-      - specs-ruby23-puppet50
-      - specs-ruby23-puppet53
-      - specs-ruby23-puppet60
-      - specs-ruby23-puppet65
-      - specs-ruby24-puppet46
-      - specs-ruby24-puppet410
-      - specs-ruby24-puppet50
-      - specs-ruby24-puppet53
-      - specs-ruby24-puppet60
-      - specs-ruby24-puppet65
-      - specs-ruby25-puppet46
-      - specs-ruby25-puppet410
-      - specs-ruby25-puppet50
-      - specs-ruby25-puppet53
-      - specs-ruby25-puppet60
-      - specs-ruby25-puppet65
-      - specs-ruby25-puppet65-windows
-      - specs-ruby26-puppet60
-      - specs-ruby26-puppet65
-      - verify-gemfile-lock-dependencies
+      # - specs-ruby21-puppet46
+      # - specs-ruby21-puppet410
+      # - specs-ruby21-puppet50
+      # - specs-ruby21-puppet53
+      # - specs-ruby22-puppet46
+      # - specs-ruby22-puppet410
+      # - specs-ruby22-puppet50
+      # - specs-ruby22-puppet53
+      # - specs-ruby23-puppet46
+      # - specs-ruby23-puppet410
+      # - specs-ruby23-puppet50
+      # - specs-ruby23-puppet53
+      # - specs-ruby23-puppet60
+      # - specs-ruby23-puppet65
+      # - specs-ruby24-puppet46
+      # - specs-ruby24-puppet410
+      # - specs-ruby24-puppet50
+      # - specs-ruby24-puppet53
+      # - specs-ruby24-puppet60
+      # - specs-ruby24-puppet65
+      # - specs-ruby25-puppet46
+      # - specs-ruby25-puppet410
+      # - specs-ruby25-puppet50
+      # - specs-ruby25-puppet53
+      # - specs-ruby25-puppet60
+      # - specs-ruby25-puppet65
+      # - specs-ruby25-puppet65-windows
+      # - specs-ruby26-puppet60
+      # - specs-ruby26-puppet65
+      # - verify-gemfile-lock-dependencies
       - kitchen-tests
