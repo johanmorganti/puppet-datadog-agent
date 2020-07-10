@@ -66,6 +66,7 @@ platforms:
       provision_command:
         - zypper ar -G https://yum.puppet.com/puppet/sles/15/x86_64/ puppet-repo
         - zypper install -y ruby puppet-agent git
+        - gem install bundler
         - ln -s /opt/puppetlabs/puppet/bin/puppet /usr/bin/puppet
         - echo 'export PATH=/opt/puppetlabs/puppet/bin/:$PATH' >> ~/.bashrc
         - mkdir /home/kitchen/puppet
