@@ -6,3 +6,12 @@ instances:
   # No configuration is needed for this check.
   # A single instance needs to be defined with any value.
   - foo: bar
+
+<% if @tags and ! @tags.empty? -%>
+    tags:
+    <%- Array(@tags).each do |tag| -%>
+      <%- if tag != '' -%>
+      - <%= tag %>
+      <%- end -%>
+    <%- end -%>
+<% end -%>

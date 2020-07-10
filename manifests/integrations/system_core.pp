@@ -2,11 +2,21 @@
 #
 # This class will install the necessary configuration for the system_core integration
 #
+# Parameters:
+#   $tags
+#       Optional array of tags
+#
 # Sample Usage:
 #   include 'datadog_agent::integrations::system_core'
 #
+# Sample Usage:
+#  class { 'datadog_agent::integrations::system_core' :
+#      tags                 => ['key:value']
+#  }
 #
-class datadog_agent::integrations::system_core inherits datadog_agent::params {
+class datadog_agent::integrations::system_core (
+  Array $tags                              = [],
+) inherits datadog_agent::params {
   include datadog_agent
 
   $legacy_dst = "${datadog_agent::params::legacy_conf_dir}/system_core.yaml"
